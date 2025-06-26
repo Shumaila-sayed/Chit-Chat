@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Chit Chat</title>
+    </head>
+    <body>
+        <h2><%= title %></h2>
+        <div>
+            <% messages.forEach((message) => { %>
+                <div>
+                    <p><%= message.user %></p>
+                    <p><%= message.text %></p>
+                </div>
+                <p><%= message.added.toDateString() %></p>
+            <% }) %>
+        </div>
+    </body>
+</html>
