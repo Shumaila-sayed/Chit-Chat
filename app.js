@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
 	res.render('index', {title: "Chit Chat", messages: messages});
 });
 
+app.get("/new", (req, res) => {
+    res.render('form')
+})
+
 // for routes
 app.use("/new", newMessageRouter);
 app.use("/", indexRouter);
