@@ -54,6 +54,17 @@ router.post('/new', (req, res) => {
 	}
 });
 
+router.get('/details/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const message = messages[id];
+    if (!message) {
+        res.status(404).send('Message Not Found');
+		return;
+    }
+    res.render('details', { message: message });
+    
+})
+
 app.use((err, req, res, next) => {
 	console.error(err);
 	res.status(500).send(err.message);

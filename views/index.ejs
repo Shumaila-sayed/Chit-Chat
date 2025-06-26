@@ -5,12 +5,16 @@
     <body>
         <h2><%= title %></h2>
         <div>
-            <% messages.forEach((message) => { %>
+            <% messages.forEach((message, index) => { %>
                 <div>
                     <p><%= message.user %></p>
                     <p><%= message.text %></p>
                 </div>
-                <p><%= message.added.toDateString() %></p>
+                <div>
+                    <p><%= message.added.toDateString() %></p>
+                    <span><a href="/details/<%= index %>">Details</a></span>
+                </div>
+                
             <% }) %>
         </div>
         <span>
