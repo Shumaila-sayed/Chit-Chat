@@ -16,8 +16,10 @@
 					<p class="text"><%= message.text %></p>
 				</div>
 				<div>
-					<% const parts = message.added.toDateString().split(' ') %>
-					<p><%= `${parts[2]} ${parts[1]}` %></p>
+					<p>
+						<%= message.added.toDateString().split(' ')[2] %> <%=
+						message.added.toDateString().split(' ')[1] %>
+					</p>
 					<span><a href="/details/<%= index %>">Details</a></span>
 				</div>
 			</div>
@@ -26,6 +28,6 @@
 		</div>
 		<button>
 			<a href="/new">Leave a Message!</a>
-        </button>
+		</button>
 	</body>
 </html>
