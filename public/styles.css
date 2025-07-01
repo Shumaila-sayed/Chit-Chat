@@ -10,6 +10,7 @@ button {
 p {
 	overflow-wrap: break-word;
 	text-wrap: pretty;
+    color: aliceblue;
 }
 
 body {
@@ -67,9 +68,48 @@ button {
 	align-self: center;
 	margin-top: 12px;
 	padding: 4px;
-	padding-inline: 12px;
+	padding-inline: 18px;
 	color: white;
 	border-radius: 8px;
 	background-color: rgb(71, 133, 204);
 	border: none;
+    cursor: pointer;
 }
+
+button:hover {
+    background-color:  rgb(54, 102, 156);
+}
+
+form {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: aliceblue;
+	padding: 14px;
+	margin-top: 12px;
+    border: 2px solid rgb(157, 216, 240);
+    border-radius: 5px;
+    gap: 6px;
+}
+
+input {
+    border: none;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+input::placeholder {
+    font-size: 12px;
+}
+
+.details {
+    display: flex;
+    gap: 14px;
+    max-width: fit-content;
+    margin: auto;
+    margin-top: 12px;
+    border: 2px solid rgb(157, 216, 240);
+    padding: 14px;
+}
+

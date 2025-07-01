@@ -1,21 +1,38 @@
 <html>
-    <head>
-        <title>New Message</title>
-    </head>
-    <body>
-        <div>
-            <h2>Enter a New Message!</h2>
-            <form method="post" action="/new" >
-                <label for="name">
-                    Name: 
-                    <input type="text" id="name" name="messageUser" required>
-                </label>
-                <label for="message">
-                    Message: 
-                    <input type="text" id="message" name="messageText" required>
-                </label>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </body>
+	<head>
+		<title>New Message</title>
+		<link
+			rel="stylesheet"
+			href="/styles.css"
+		/>
+	</head>
+	<body>
+		<div>
+			<h1>Enter a New Message!</h1>
+			<form
+				method="post"
+				action="/new"
+			>
+				<label for="name"> Name: </label>
+				<input
+					type="text"
+					id="name"
+					name="messageUser"
+					required
+                    placeholder="John Doe"
+				/>
+
+				<label for="message"> Message: </label>
+				<input
+					type="text"
+					id="message"
+					name="messageText"
+					required
+                    placeholder="Type in here..."
+				/>
+
+				<button type="submit">Send</button>
+			</form>
+		</div>
+	</body>
 </html>

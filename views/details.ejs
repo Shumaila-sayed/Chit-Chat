@@ -1,17 +1,25 @@
 <html>
-    <head>
-        <title>Details</title>
-    </head>
-    <body>
-        <div>
-            <ul>
-                <li>
-                    <p><%= message.user %></p>
-                    <p><%= message.text %></p>
-                    <p><%= message.added.toLocaleString() %></p>
-                </li>
-            </ul>
-        </div>
-        <a href="/"><button>Back</button></a>
-    </body>
+	<head>
+		<title>Details</title>
+		<link
+			rel="stylesheet"
+			href="/styles.css"
+		/>
+	</head>
+	<body>
+		<div class="details">
+			<div>
+				<p>Name:</p>
+				<p>Text:</p>
+				<p>Date & Time:</p>
+			</div>
+
+			<div>
+				<p><%= message.user %></p>
+				<p><%= message.text %></p>
+				<p><%= message.added.toLocaleString() %></p>
+			</div>
+		</div>
+		<button><a href="/">Back</a></button>
+	</body>
 </html>
