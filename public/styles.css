@@ -27,7 +27,8 @@ h1 {
 }
 
 .container {
-	min-width: 50vw;
+	width: 50vw;
+    height: 70vh;
 	margin: auto;
 	border-radius: 5px;
 	overflow-y: auto;
@@ -40,6 +41,7 @@ h1 {
 .userMessage {
 	display: flex;
 	justify-content: space-between;
+    gap: 6px;
 	border-bottom: 2px solid rgba(175, 175, 175, 0.753);
 	padding: 4px;
 }
