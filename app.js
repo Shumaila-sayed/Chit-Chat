@@ -18,6 +18,21 @@ const messages = [
 		user: 'Charles',
 		added: new Date(),
 	},
+	{
+		text: "That's not Vegan!",
+		user: 'Molly',
+		added: new Date(),
+	},
+	{
+		text: 'Flat earther here',
+		user: 'Kevin',
+		added: new Date(),
+	},
+	{
+		text: "Unpopular opinion: Liking Indie music doesn't make you cool",
+		user: 'Matt',
+		added: new Date(),
+	},
 ];
 
 app.get('/', (req, res) => {
