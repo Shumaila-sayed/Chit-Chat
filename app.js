@@ -31,6 +31,10 @@ app.get('/new', (req, res) => {
 	res.render('form');
 });
 
+// for css - static assets
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath));
+
 // for route
 app.use(router);
 
