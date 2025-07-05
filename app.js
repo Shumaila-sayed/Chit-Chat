@@ -15,6 +15,9 @@ const assetsPath = path.join(__dirname, 'public');
 app.use(express.static(assetsPath));
 
 // for route
+app.get('/', (req, res) => {
+	res.send('✅ Chit Chat backend is up and running!');
+});
 app.use('/', newRouter);
 
 app.use((err, req, res, next) => {
