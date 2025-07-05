@@ -1,8 +1,13 @@
 const db = require('../db/queries');
 
 exports.getMessages = async (req, res) => {
-	const messages = await db.getAllMessages();
-	res.render('index', { title: 'Chit Chat', messages: messages });
+	try {
+		const messages = await db.getAllMessages();
+		res.render('index', { title: 'Chit Chat', messages: messages });
+	} catch (error) {
+		console.error('Error fetching messages:', err);
+		res.status(500).send('Error fetching messages');
+	}
 };
 
 exports.newMessageGet = (req, res) => {
