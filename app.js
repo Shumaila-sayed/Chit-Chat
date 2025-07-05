@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('node:path');
@@ -23,7 +22,7 @@ app.use((err, req, res, next) => {
 	res.status(500).send(err.message);
 });
 
-const PORT = parseInt(process.env.PORT);
-app.listen(PORT, () => {
-	console.log(`It's working on port ${PORT}!`);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+	console.log(`It's working on port ${port}!`);
 });
