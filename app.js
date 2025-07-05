@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('node:path');
@@ -24,7 +25,7 @@ app.get('/env-check', (req, res) => {
 		DB_PORT: process.env.PORT_DB || process.env.PORT, // explain port confusion
 	});
 });
-  
+
 app.use('/', newRouter);
 
 app.use((err, req, res, next) => {
