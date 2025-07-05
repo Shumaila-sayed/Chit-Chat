@@ -16,7 +16,6 @@ exports.newMessageGet = (req, res) => {
 
 exports.newMessagePost = async (req, res) => {
 	try {
-		console.log(req.body);
 		const { messageText, messageUser } = req.body;
 
 		if (!messageText || !messageUser) {
@@ -27,7 +26,7 @@ exports.newMessagePost = async (req, res) => {
 		res.redirect('/');
 	} catch (error) {
 		console.log('Error getting message:', error);
-		res.status(500).send('Internal Server Error', error.message, error.stack);
+		res.status(500).send('Internal Server Error');
 	}
 };
 
