@@ -1,5 +1,5 @@
-require('dotenv').config();
 const { Client } = require('pg');
+const { argv } = require('node:process');
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
@@ -20,13 +20,10 @@ VALUES
 async function main() {
     console.log('seeding...');
     const client = new Client({
-			host: process.env.HOST,
-			user: process.env.USER,
-			database: process.env.DATABASE,
-			password: process.env.PASSWORD,
-			port: parseInt(process.env.PORT),
+			connectionString: argv[2],
 			ssl: { rejectUnauthorized: false },
 		});
+    
   await client.connect();
 	await client.query(SQL);
 	await client.end();
