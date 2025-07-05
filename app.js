@@ -15,9 +15,16 @@ const assetsPath = path.join(__dirname, 'public');
 app.use(express.static(assetsPath));
 
 // for route
-app.get('/', (req, res) => {
-	res.send('✅ Chit Chat backend is up and running!');
+app.get('/env-check', (req, res) => {
+	res.json({
+		PORT: process.env.PORT,
+		DB_HOST: process.env.HOST,
+		DB_USER: process.env.USER,
+		DB_NAME: process.env.DATABASE,
+		DB_PORT: process.env.PORT_DB || process.env.PORT, // explain port confusion
+	});
 });
+  
 app.use('/', newRouter);
 
 app.use((err, req, res, next) => {
